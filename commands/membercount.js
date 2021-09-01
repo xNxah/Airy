@@ -10,7 +10,7 @@ module.exports = {
 
         const Embed = new MessageEmbed()
         .setColor('#11064b')
-        .setDescription(userCount)
+        .setDescription('There are currently **${userCount}** members in airesTech.')
 
         message.reply({ embeds: [Embed]})
     }
