@@ -10,7 +10,7 @@ module.exports = {
         let title = args[3]; 
         let image = args[4];
         let desc = args.slice(5).join(" ");
-        if(!args[1]) return message.reply('no argument');
+        if(!args[5]) return message.reply('no argument');
         const Embed =  new MessageEmbed()
         .setColor(color)
         .setTitle(title)
