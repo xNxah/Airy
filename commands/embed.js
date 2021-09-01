@@ -15,6 +15,6 @@ let title = args[0];
     .setTitle(title)
     .setImage(image)
     .setDescription(desc);
-message.reply('Sending now.. :point_right:');
-message.channel.send({ embeds: [Embed]});
+message.reply('Sending now.. :point_right:')
+message.channel.send({ embeds: [Embed]})
 }}
