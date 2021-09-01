@@ -7,11 +7,11 @@ module.exports = {
     execute(client, message, args){
 
         const EmbedBan = new MessageEmbed()
-        .setColor('#FFFFFF')
+        .setColor('#11064b')
         .setDescription("The user has been banned. ")
 
         const EmbedFailBan = new MessageEmbed()
-        .setColor('#FFFFFF')
+        .setColor('#11064b')
         .setDescription("The user you tried to ban is not in the server.")
         
         const member = message.mentions.users.first();

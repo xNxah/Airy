@@ -7,11 +7,11 @@ module.exports = {
     execute(client, message, args){
 
         const EmbedKick = new MessageEmbed()
-        .setColor('#FFFFFF')
+        .setColor('#11064b')
         .setDescription("The user has been kicked. ")
 
         const EmbedFailKick = new MessageEmbed()
-        .setColor('#FFFFFF')
+        .setColor('#11064b')
         .setDescription("The user you tried to kick is not in the server.")
         
         const member = message.mentions.users.first();

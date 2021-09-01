@@ -9,11 +9,11 @@ module.exports = {
         let userID = args[0]
 
         const EmbedUnBan = new MessageEmbed()
-        .setColor('#FFFFFF')
+        .setColor('#11064b')
         .setDescription('The user has been unbanned. ')
 
         const EmbedFailUnBan = new MessageEmbed()
-        .setColor('#FFFFFF')
+        .setColor('#11064b')
         .setDescription("The user you tried to unban is invalid.")
         
         if(message.guild.fetchBans().userID){
