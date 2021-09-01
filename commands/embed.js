@@ -17,5 +17,5 @@ module.exports = {
         .setImage(image)
         .setDescription(desc);
 message.reply('Sending now.. :point_right:')
-message.channel.send({ embeds: [Embed]})
+message.guild.channels.cache.get(channel.id).send({ embeds: [Embed]})
 }}
