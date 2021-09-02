@@ -4,7 +4,7 @@ const groupID = '11938979'
 module.exports = {
   name: 'demote',
   description: "demotes (obviously)",
-  permissions: ["READ_MESSAGE_HISTORY"], 
+  permissions: ["ADMINISTRATOR"], 
   execute(client, message, args){ 
     const robloxname = args[0]
 
