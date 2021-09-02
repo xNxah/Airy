@@ -21,6 +21,17 @@ client.on("ready", () => {
     console.log('Airy is now online')
 });
 
+client.on("uncaughtException", (err) => {
+    console.log("Uncaught Exception: " + err);
+  
+    const exceptionembed = new MessageEmbed()
+    .setTitle("Uncaught Exception")
+    .setDescription(`${err}`)
+    .setColor("RED")
+    client.channels.cache.get('881907696268374026').send({ embeds: [exceptionembed] })
+  });
+  
+
 
 
 ['command_handler', 'event_handler'].forEach(handler => {
