@@ -11,9 +11,12 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
-noblox.setCookie(process.env.ROBLOSEC);
-noblox.cookieLogin(process.env.ROBLOSEC);
-  client.on("ready", () => {
+
+async function startApp () {
+    const currentUser = await noblox.setCookie(process.env.ROBLOSEC) 
+    console.log(`Logged in as ${currentUser.UserName} [${currentUser.UserID}]`)
+}
+client.on("ready", () => {
 client.user.setActivity(`AIRES | -help`, { type: 'WATCHING' })
         .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
  noblox.getCurrentUser().then(currentuser => {
