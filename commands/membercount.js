@@ -7,8 +7,9 @@ module.exports = {
     execute(client, message, args){
 
         const Embed = new MessageEmbed()
+        .setTitle('Membercount')
         .setColor('#11064b')
-        .setDescription(`There are currently ${message.member.guild.memberCount} members in airesTech.`)
+        .setDescription(`There are currently **${message.member.guild.memberCount}** members in airesTech.`)
 
         message.reply({ embeds: [Embed]})
     }

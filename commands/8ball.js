@@ -6,11 +6,14 @@ module.exports = {
     permissions: ["READ_MESSAGE_HISTORY"],
     execute(client, message, args){
 
+        const messages = ["Yes", "No", "Probably", "Maybe", "I don't know", "Lmao what no lol", "Wdym?", "Makes no sense for me-", "Bro leave me alone I'm tired", "zZzZzZzz oh what did you say?", "I can't tell right now"]
+
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
         const EmbedHelp = new MessageEmbed()
-        .setTitle('Heyy!')
+        .setTitle('The magic 8ball got an answer!')
         .setColor('#FFFFFF')
-        .setDescription("I'm Airy. I'm the official airesTech bot. And I got my eyes on y'all :eyes: If you're trying to find my commands, well bad news. I don't really have any at the current moment, but there will be added many commands later on! :)")
-        .setFooter('Airy scripted by @imNoah', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
+        .setDescription(`${randomMessage}`)
 
         message.reply({ embeds: [EmbedHelp]})
     }
