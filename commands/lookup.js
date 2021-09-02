@@ -16,7 +16,13 @@ module.exports = {
           
    if (id) {
 const rankName = noblox.getRankNameInGroup(groupId, id)
+if (rankName == "") {
+  rankName = "None";
+}
 let blurb = noblox.getBlurb({userId: id})
+if (blurb == "") {
+  blurb = "None";
+}
  const EmbedHelp = new MessageEmbed()
         .setTitle(`Account information for ${person}`)
         .setColor('#11064b')
