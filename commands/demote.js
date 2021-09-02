@@ -1,6 +1,6 @@
 const noblox = require('noblox.js');
 const {MessageEmbed} = require('discord.js')
-const groupId = '11938979'
+const groupID = '11938979'
 module.exports = {
     name: 'demote',
     description: "demotes (obviously)",
