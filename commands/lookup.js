@@ -6,7 +6,7 @@ module.exports = {
     description: "finds cool person (obviously)",
     permissions: ["READ_MESSAGE_HISTORY"],
     execute(client, message, args){ 
- let person = args[1]; 
+ let person = args[0]; 
   noblox.getIdFromUsername(person).catch(err => {
             return msg.reply(
               "sorry, that user doesn't seem to exist on ROBLOX."
