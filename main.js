@@ -11,7 +11,7 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
-nblx.setCookie(process.env.ROBLOSEC);
+noblox.setCookie(process.env.ROBLOSEC);
 noblox.cookieLogin(cookie);
   client.on("ready", () => {
 client.user.setActivity(`AIRES | -help`, { type: 'WATCHING' })
