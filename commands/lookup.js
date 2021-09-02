@@ -16,7 +16,7 @@ module.exports = {
           
    if (id) {
     const rankName = noblox.getRankNameInGroup(groupId, id)
-    let rankname2 = rankName.toString();
+    let rankName2 = rankName.toString();
     if (rankName2 == "") {
       rankName2 = "None";
     }
