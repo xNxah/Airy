@@ -11,24 +11,20 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
-
+nblx.setCookie(process.env.ROBLOSEC);
+noblox.cookieLogin(cookie);
   client.on("ready", () => {
 client.user.setActivity(`AIRES | -help`, { type: 'WATCHING' })
         .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+ noblox.getCurrentUser().then(currentuser => {
+        if(!currentuser)
+    console.warn("You forgot to add a cookie.")
+    else
+    console.log(`Logged on Discord: ${bot.user.tag} \nCurrent Roblox user: ${currentuser.UserName} \nCurrent userId: ${currentuser.UserID}`)})
         .catch(console.error);
     });
 
-function login() {
-    return noblox.cookieLogin(process.env.ROBLOSEC);
-}
- 
-login()
-    .then(function() {
-        console.log('Token Working!');
-})
-    .catch(function(error) {
-      console.log(`Error! 404: ${error}`);
-});
+
 
 ['command_handler', 'event_handler'].forEach(handler => {
     require(`./handlers/${handler}`)(client, Discord);
