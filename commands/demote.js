@@ -7,16 +7,16 @@ module.exports = {
   permissions: ["READ_MESSAGE_HISTORY"], 
   execute(client, message, args){ 
     const robloxname = args[0]
- //await can only be used in async functions!
+
 async function DemoteUser (groupId, robloxname) { 
-  //await will yield the code until a value is returned.
-  const userId = await noblox.getIdFromUsername(robloxname).catch(function(error) {
+
+  const userId = noblox.getIdFromUsername(robloxname).catch(function(error) {
     console.log("There was an error getting the id!", error)  
-  }); //Handle the rejection accordingly.
+  });
     
   if (!userId) return console.log("No id was returned.");
     const oldRank = noblox.getRankNameInGroup(groupID, userId)
- noblox.demote(groupID, userId); //Use the value returned to demote the user.
+    noblox.demote(groupID, userId);
 }
    
    const rankname = noblox.getRankNameInGroup(groupID, userId)

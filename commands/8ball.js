@@ -12,7 +12,7 @@ module.exports = {
 
         const EmbedHelp = new MessageEmbed()
         .setTitle('The magic 8ball got an answer!')
-        .setColor('#FFFFFF')
+        .setColor('#11064b')
         .setDescription(`${randomMessage}`)
 
         message.reply({ embeds: [EmbedHelp]})
