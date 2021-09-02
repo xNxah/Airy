@@ -19,13 +19,7 @@ async function startApp () {
 client.on("ready", () => {
 client.user.setActivity(`AIRES | -help`, { type: 'WATCHING' })
         .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
- noblox.getCurrentUser().then(currentuser => {
-        if(!currentuser)
-    console.warn("You forgot to add a cookie.")
-    else
-    console.log(`Logged on Discord: ${bot.user.tag} \nCurrent Roblox user: ${currentuser.UserName} \nCurrent userId: ${currentuser.UserID}`)})
-        .catch(console.error);
-    });
+});
 
 
 
