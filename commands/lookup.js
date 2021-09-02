@@ -15,8 +15,8 @@ module.exports = {
           rbx.getIdFromUsername(person).then(id => {
           
    if (id) {
-const rankName = await noblox.getRankNameInGroup(groupId, id)
-let blurb = await noblox.getBlurb({userId: id})
+const rankName = noblox.getRankNameInGroup(groupId, id)
+let blurb = noblox.getBlurb({userId: id})
  const EmbedHelp = new MessageEmbed()
         .setTitle(`Account information for ${person}`)
         .setColor('#11064b')

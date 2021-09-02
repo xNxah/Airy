@@ -8,17 +8,17 @@ module.exports = {
     execute(client, message, args){ 
       const robloxname = args[1]
       if (!robloxname) return  message.lineReplyNoMention("Please run the command again and provide a username.")
-      const robloxid = await noblox.getIdFromUsername(robloxname)
-      const oldRnk = await noblox.getRankNameInGroup(groupID, robloxid)
+      const robloxid = noblox.getIdFromUsername(robloxname)
+      const oldRnk = noblox.getRankNameInGroup(groupID, robloxid)
                       noblox.demote(config.GroupID, robloxid)
                           .then(async (success) => {
 
-                              const rankname = await noblox.getRankNameInGroup(groupID, robloxid)
+                              const rankname = noblox.getRankNameInGroup(groupID, robloxid)
                               const user = message.author
                               const embed = new Discord.MessageEmbed()
                                   .setTitle('User Demoted')
                                   .setDescription(`**${robloxname}** was Demoted to "**${rankname}**"`)
-                                  .addField('Group', await (await noblox.getGroup(config.GroupID)).name)
+                                  .addField('Group', (noblox.getGroup(config.GroupID)).name)
                                   .addField('Old Rank', oldRnk)
                                   .addField('Ranking User', user)
                                   .setURL(`https://www.roblox.com/users/${robloxid}/profile`)

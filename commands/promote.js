@@ -20,7 +20,7 @@ module.exports = {
         const oldRank = await.noblox.getRankNameInGroup(groupID, id)
         noblox.promote(groupID, id)
         .then(async (sucess) => {
-          const rankName = await noblox.getRankNameInGroup(groupID, id)
+          const rankName = noblox.getRankNameInGroup(groupID, id)
           const user = message.author
         })
       }
