@@ -17,7 +17,7 @@ async function startApp () {
     console.log(`Logged in as ${currentUser.UserName} [${currentUser.UserID}]`)
 }
 client.on("ready", () => {
-    client.user.setActivity(`airesTech | -help`, { type: 'WATCHING' })
+    client.user.setActivity(`airesTech || -help`, { type: 'WATCHING' })
     console.log('Airy is now online')
 });
 
