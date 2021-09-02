@@ -1,38 +1,32 @@
 const noblox = require('noblox.js');
 const {MessageEmbed} = require('discord.js')
-const groupId = 'ID'
+const groupId = '11938979'
 module.exports = {
     name: 'demote',
     description: "demotes (obviously)",
-    permissions: ["READ_MESSAGE_HISTORY"], // CHANGE THIS OR UR FUCKED
+    permissions: ["READ_MESSAGE_HISTORY"], 
     execute(client, message, args){ 
-const failembed = new MessageEmbed()
-        .setTitle(`Demotion Unsuccessful`)
-        .setColor('#11064b')
-      .setDescription(`Cannot demote ${person}, this is not a ROBLOX username.`)
-        .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
- let person = args[1]; 
-  rbx.getIdFromUsername(person).catch(err => {
-            return msg.reply(failembed);
-          });
-          rbx.getIdFromUsername(person).then(id => {
-            // gets user id for the specific part of the embed you'll need it for.
-   if (id) {
-   const oldRank = await noblox.getRankNameInGroup(groupID, id)
-                        noblox.demote(groupID, id)
-                            .then(async (success) => {
+      const robloxname = args[1]
+      if (!robloxname) return  message.lineReplyNoMention("Please run the command again and provide a username.")
+      const robloxid = await noblox.getIdFromUsername(robloxname)
+      const oldRnk = await noblox.getRankNameInGroup(groupID, robloxid)
+                      noblox.demote(config.GroupID, robloxid)
+                          .then(async (success) => {
 
-                                const rankname = await noblox.getRankNameInGroup(groupID, id)
-                                const user = message.author
- const Embed = new MessageEmbed()
-        .setTitle(`Demotion Successful`)
-        .setColor('#11064b')
-      .setDescription(`${user} has demoted ${person} from ${oldRank} to ${rankname}.`)
-        .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
-
-        message.reply({ embeds: [Embed]})
-        })
-      }
-    })
-  }
-}
+                              const rankname = await noblox.getRankNameInGroup(groupID, robloxid)
+                              const user = message.author
+                              const embed = new Discord.MessageEmbed()
+                                  .setTitle('User Demoted')
+                                  .setDescription(`**${robloxname}** was Demoted to "**${rankname}**"`)
+                                  .addField('Group', await (await noblox.getGroup(config.GroupID)).name)
+                                  .addField('Old Rank', oldRnk)
+                                  .addField('Ranking User', user)
+                                  .setURL(`https://www.roblox.com/users/${robloxid}/profile`)
+                                  .setThumbnail(`https://www.roblox.com/headshot-thumbnail/image?userId=${robloxid}&width=420&height=420&format=png`)
+                                  .setColor('#DC143C')
+                                  .setTimestamp()
+                            
+                              message.reply({ embeds: [embed]});
+                          })
+                        }
+                      }

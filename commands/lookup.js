@@ -1,6 +1,6 @@
 const noblox = require('noblox.js');
 const {MessageEmbed} = require('discord.js')
-const groupId = 'ID'
+const groupId = '11938979'
 module.exports = {
     name: 'lookup',
     description: "finds cool person (obviously)",
@@ -13,7 +13,7 @@ module.exports = {
             );
           });
           rbx.getIdFromUsername(person).then(id => {
-            // gets user id for the specific part of the embed you'll need it for.
+          
    if (id) {
 const rankName = await noblox.getRankNameInGroup(groupId, id)
 let blurb = await noblox.getBlurb({userId: id})
