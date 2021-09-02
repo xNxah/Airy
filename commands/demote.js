@@ -10,7 +10,7 @@ module.exports = {
       if (!robloxname) return  message.reply("Please run the command again and provide a username.")
       const robloxid = noblox.getIdFromUsername(robloxname)
       const oldRnk = noblox.getRankNameInGroup(groupID, robloxid)
-                      noblox.demote(config.GroupID, robloxid)
+                      noblox.demote(groupID, robloxid)
                           .then(async (success) => {
 
                               const rankname = noblox.getRankNameInGroup(groupID, robloxid)
@@ -18,7 +18,7 @@ module.exports = {
                               const embed = new Discord.MessageEmbed()
                                   .setTitle('User Demoted')
                                   .setDescription(`**${robloxname}** was Demoted to "**${rankname}**"`)
-                                  .addField('Group', (noblox.getGroup(config.GroupID)).name)
+                                  .addField('Group', (noblox.getGroup(groupID)).name)
                                   .addField('Old Rank', oldRnk)
                                   .addField('Ranking User', user)
                                   .setURL(`https://www.roblox.com/users/${robloxid}/profile`)
