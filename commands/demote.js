@@ -7,7 +7,7 @@ module.exports = {
     permissions: ["READ_MESSAGE_HISTORY"], 
     execute(client, message, args){ 
       const robloxname = args[1]
-      if (!robloxname) return  message.lineReplyNoMention("Please run the command again and provide a username.")
+      if (!robloxname) return  message.reply("Please run the command again and provide a username.")
       const robloxid = noblox.getIdFromUsername(robloxname)
       const oldRnk = noblox.getRankNameInGroup(groupID, robloxid)
                       noblox.demote(config.GroupID, robloxid)
