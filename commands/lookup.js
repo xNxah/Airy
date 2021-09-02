@@ -7,12 +7,12 @@ module.exports = {
     permissions: ["READ_MESSAGE_HISTORY"],
     execute(client, message, args){ 
  let person = args[1]; 
-  rbx.getIdFromUsername(person).catch(err => {
+  noblox.getIdFromUsername(person).catch(err => {
             return msg.reply(
               "sorry, that user doesn't seem to exist on ROBLOX."
             );
           });
-          rbx.getIdFromUsername(person).then(id => {
+          noblox.getIdFromUsername(person).then(id => {
           
    if (id) {
 const rankName = noblox.getRankNameInGroup(groupId, id)
