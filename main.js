@@ -12,7 +12,7 @@ const fs = require('fs');
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 noblox.setCookie(process.env.ROBLOSEC);
-noblox.cookieLogin(cookie);
+noblox.cookieLogin(process.env.ROBLOSEC);
   client.on("ready", () => {
 client.user.setActivity(`AIRES | -help`, { type: 'WATCHING' })
         .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
