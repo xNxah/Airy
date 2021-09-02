@@ -7,11 +7,11 @@ module.exports = {
   description: "Promotes a user in the roblox group. ",
   permissions: ["ADMINISTRATOR"],
   execute(client, message, args){
+    let person = args[0];
     const failEmbed = new MessageEmbed()
     .setTitle(`Promotion Unsuccessful`)
     .setColor('#11064b')
     .setDescription(`Cannot promote **${person}**, this is not a ROBLOX username.`)
-    let person = args[0];
     rbx.getIdFromUser(person).catch(err => {
       return msg.reply(failEmbed);
     });
