@@ -10,7 +10,7 @@ const failembed = new MessageEmbed()
         .setTitle(`Demotion Unsuccessful`)
         .setColor('#11064b')
       .setDescription(`Cannot demote ${person}, this is not a ROBLOX username.`)
-        .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663'
+        .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
  let person = args[1]; 
   rbx.getIdFromUsername(person).catch(err => {
             return msg.reply(failembed);
@@ -31,3 +31,8 @@ const failembed = new MessageEmbed()
         .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
 
         message.reply({ embeds: [Embed]})
+        })
+      }
+    })
+  }
+}

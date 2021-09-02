@@ -26,3 +26,7 @@ let blurb = await noblox.getBlurb({userId: id})
         .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
 
         message.reply({ embeds: [EmbedHelp]})
+      }
+    })
+  }
+}
