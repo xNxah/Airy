@@ -15,24 +15,26 @@ module.exports = {
           noblox.getIdFromUsername(person).then(id => {
           
    if (id) {
-const rankName = noblox.getRankNameInGroup(groupId, id)
-if (rankName == "") {
-  rankName = "None";
-}
-let blurb = noblox.getBlurb({userId: id})
-if (blurb == "") {
-  blurb = "None";
-}
- const EmbedHelp = new MessageEmbed()
-        .setTitle(`Account information for ${person}`)
-        .setColor('#11064b')
-        .addField('Group Name', 'Aires', false)
-        .addField('Group Rank', rankName, false)
-        .addField('Blurb', blurb, false)
-        .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
-
-        message.reply({ embeds: [EmbedHelp]})
+    const rankName = noblox.getRankNameInGroup(groupId, id)
+    let rankname2 = rankName.toString();
+    if (rankName2 == "") {
+      rankName2 = "None";
+    }
+    let blurb = noblox.getBlurb({userId: id})
+    let burb2 = blurb.toString();
+    if (blurb2 == "") {
+      blurb2 = "None";
+    }
+     const EmbedHelp = new MessageEmbed()
+            .setTitle(`Account information for ${person}`)
+            .setColor('#11064b')
+            .addField('Group Name', 'Aires', false)
+            .addField('Group Rank', rankName2, false)
+            .addField('Blurb', blurb2, false)
+            .setFooter('Airy scripted by <@543447797270052864>', 'https://media.discordapp.net/attachments/812422336421560400/876047455207174194/airy.jpg?width=663&height=663')
+    
+            message.reply({ embeds: [EmbedHelp]})
+          }
+        })
       }
-    })
-  }
-}
+    }
