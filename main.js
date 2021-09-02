@@ -17,8 +17,8 @@ async function startApp () {
     console.log(`Logged in as ${currentUser.UserName} [${currentUser.UserID}]`)
 }
 client.on("ready", () => {
-client.user.setActivity(`AIRES | -help`, { type: 'WATCHING' })
-        .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+client.user.setActivity(`airesTech | -help`, { type: 'WATCHING' })
+        (presence => console.log(`Activity set to ${presence.activities[0].name}`))
 });
 
 
