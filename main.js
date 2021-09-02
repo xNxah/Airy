@@ -17,9 +17,9 @@ client.user.setActivity(`AIRES | -help`, { type: 'WATCHING' })
         .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
         .catch(console.error);
     });
-// Additions to main.js
+
 function login() {
-    return noblox.cookieLogin(process.env.COOKIE);
+    return noblox.cookieLogin(process.env.ROBLOSEC);
 }
  
 login()
@@ -29,6 +29,7 @@ login()
     .catch(function(error) {
       console.log(`Error! 404: ${error}`);
 });
+
 ['command_handler', 'event_handler'].forEach(handler => {
     require(`./handlers/${handler}`)(client, Discord);
 })
