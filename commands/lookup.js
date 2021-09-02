@@ -8,7 +8,7 @@ module.exports = {
     execute(client, message, args){ 
  let person = args[0]; 
   noblox.getIdFromUsername(person).catch(err => {
-            return msg.reply(
+            return message.reply(
               "sorry, that user doesn't seem to exist on ROBLOX."
             );
           });
