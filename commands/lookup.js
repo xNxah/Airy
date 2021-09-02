@@ -21,7 +21,7 @@ module.exports = {
       rankName2 = "None";
     }
     let blurb = noblox.getBlurb({userId: id})
-    let burb2 = blurb.toString();
+   let blurb2 = blurb.toString(); // i put burb2 
     if (blurb2 == "") {
       blurb2 = "None";
     }
