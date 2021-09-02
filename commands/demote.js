@@ -6,7 +6,7 @@ module.exports = {
     description: "demotes (obviously)",
     permissions: ["READ_MESSAGE_HISTORY"], 
     execute(client, message, args){ 
-      const robloxname = args[1]
+      const robloxname = args[0]
       if (!robloxname) return  message.reply("Please run the command again and provide a username.")
       const robloxid = noblox.getIdFromUsername(robloxname)
       const oldRnk = noblox.getRankNameInGroup(groupID, robloxid)

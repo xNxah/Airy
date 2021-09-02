@@ -11,7 +11,7 @@ module.exports = {
     .setTitle(`Promotion Unsuccessful`)
     .setColor('#11064b')
     .setDescription(`Cannot promote **${person}**, this is not a ROBLOX username.`)
-    let person = args[1];
+    let person = args[0];
     rbx.getIdFromUser(person).catch(err => {
       return msg.reply(failEmbed);
     });
