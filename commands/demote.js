@@ -11,22 +11,21 @@ module.exports = {
     const robloxid = noblox.getIdFromUsername(robloxname)
     const oldRank = noblox.getRankNameInGroup(groupID, robloxid)
     noblox.demote(groupID, robloxid)
-                          .then(async (success) => {
+    .then(async (success) => {
 
-                              const rankname = noblox.getRankNameInGroup(groupID, robloxid)
-                              const user = message.author
-                              const embed = new Discord.MessageEmbed()
-                                  .setTitle('User Demoted')
-                                  .setDescription(`**${robloxname}** was Demoted to "**${rankname}**"`)
-                                  .addField('Group', (noblox.getGroup(groupID)).name)
-                                  .addField('Old Rank', oldRank)
-                                  .addField('Ranking User', user)
-                                  .setURL(`https://www.roblox.com/users/${robloxid}/profile`)
-                                  .setThumbnail(`https://www.roblox.com/headshot-thumbnail/image?userId=${robloxid}&width=420&height=420&format=png`)
-                                  .setColor('#DC143C')
-                                  .setTimestamp()
+      const rankname = noblox.getRankNameInGroup(groupID, robloxid)
+      const user = message.author
+      const embed = new Discord.MessageEmbed()
+        .setTitle('User Demoted')
+        .setDescription(`**${robloxname}** was Demoted to "**${rankname}**"`)
+        .addField('Group', (noblox.getGroup(groupID)).name)
+        .addField('Old Rank', oldRank)
+        .addField('Ranking User', user)
+        .setURL(`https://www.roblox.com/users/${robloxid}/profile`)
+        .setThumbnail(`https://www.roblox.com/headshot-thumbnail/image?userId=${robloxid}&width=420&height=420&format=png`)          .setColor('#DC143C')
+        .setTimestamp()
                             
-                              message.reply({ embeds: [embed]});
-                          })
-                        }
-                      }
+      message.reply({ embeds: [embed]});
+    })
+  }
+}
