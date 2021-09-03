@@ -10,7 +10,7 @@ module.exports = {
         const result = acceptedReplies[random];
 
         const choice = args[0];
-        if (!choice) return message.channel.send(`How to play: -rps rock|paper|scissors\`);
+        if (!choice) return message.channel.send(`How to play: -rps rock|paper|scissors`);
         if (!acceptedReplies.includes(choice)) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
         
         console.log('Bot Result:', result);
@@ -18,16 +18,16 @@ module.exports = {
         
         switch (choice) {
             case 'rock': {
-                if (result === 'paper') return message.reply(`${result} I won!`);
-                else return message.reply(`${result} You won!`);
+                if (result === 'paper') return message.reply(`I chose **${result}**! I won!`);
+                else return message.reply(`I chose **${result}**! You won!`);
             }
             case 'paper': {
-                if (result === 'scissors') return message.reply(`${result} I won!`);
-                else return message.reply(`${result} You won!`);        
+                if (result === 'scissors') return message.reply(`I chose **${result}**! I won!`);
+                else return message.reply(`I chose **${result}**! You won!`);        
             }
             case 'scissors': {
-                if (result === 'rock') return message.reply(`${result} I won!`);
-                else return message.reply(`${result} You won!`);
+                if (result === 'rock') return message.reply(`I chose **${result}**! I won!`);
+                else return message.reply(`I chose **${result}**! You won!`);
             }
             default: {
                 return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
