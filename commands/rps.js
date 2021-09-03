@@ -10,7 +10,7 @@ module.exports = {
         const result = acceptedReplies[random];
 
         const choice = args[0];
-        if (!choice) return message.channel.send(`How to play: -rps rock|paper|scissors\``);
+        if (!choice) return message.channel.send(`How to play: -rps rock|paper|scissors\`);
         if (!acceptedReplies.includes(choice)) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
         
         console.log('Bot Result:', result);
