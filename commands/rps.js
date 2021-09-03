@@ -1,3 +1,10 @@
+const {MessageEmbed} = require('discord.js')
+
+module.exports = {
+    name: 'rps',
+    description: "Plays a game of rps. ",
+    permissions: ["READ_MESSAGE_HISTORY"],
+    execute(client, message, args){
         const acceptedReplies = ['rock', 'paper', 'scissors'];
         const random = Math.floor((Math.random() * acceptedReplies.length));
         const result = acceptedReplies[random];
@@ -26,3 +33,5 @@
                 return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
             }
         }
+    }
+}
