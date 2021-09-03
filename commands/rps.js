@@ -19,15 +19,15 @@ module.exports = {
         switch (choice) {
             case 'rock': {
                 if (result === 'paper') return message.reply(`${result} I won!`);
-                else return message.reply(`${result}You won!`);
+                else return message.reply(`${result} You won!`);
             }
             case 'paper': {
                 if (result === 'scissors') return message.reply(`${result} I won!`);
-                else return message.reply(`${result}You won!`);        
+                else return message.reply(`${result} You won!`);        
             }
             case 'scissors': {
                 if (result === 'rock') return message.reply(`${result} I won!`);
-                else return message.reply(`${result}You won!`);
+                else return message.reply(`${result} You won!`);
             }
             default: {
                 return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
