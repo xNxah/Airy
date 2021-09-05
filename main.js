@@ -25,4 +25,4 @@ async function startApp () {
 
 
 
-client.login('ODgxNDQyOTI3Njk0NDY3MDgz.YSs5sg.O_LhexNJXTFSc58PF7P5N4O3pKU');
+client.login(process.env.DISCORD_TOKEN);
