@@ -16,10 +16,6 @@ async function startApp () {
     const currentUser = await noblox.setCookie(process.env.ROBLOSEC) 
     console.log(`Logged in as ${currentUser.UserName} [${currentUser.UserID}]`)
 }
-client.on("ready", () => {
-    client.user.setActivity(`airesTech || -help`, { type: 'WATCHING' })
-    console.log('Airy is now online')
-});
 
 
 
@@ -29,4 +25,4 @@ client.on("ready", () => {
 
 
 
-client.login(process.env.DISCORD_TOKEN);
+client.login('ODgxNDQyOTI3Njk0NDY3MDgz.YSs5sg.O_LhexNJXTFSc58PF7P5N4O3pKU');

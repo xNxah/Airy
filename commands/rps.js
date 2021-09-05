@@ -13,21 +13,20 @@ module.exports = {
         if (!choice) return message.channel.send(`How to play: -rps rock|paper|scissors`);
         if (!acceptedReplies.includes(choice)) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
         
-        console.log('Bot Result:', result);
         if (result === choice) return message.reply("It's a tie! We had the same choice.");
         
         switch (choice) {
             case 'rock': {
-                if (result === 'paper') return message.reply(`I chose **${result}**! I won!`);
-                else return message.reply(`I chose **${result}**! You won!`);
+                if (result === 'paper') return message.reply(`I choose **${result}**! I won!`);
+                else return message.reply(`I choose **${result}**! You won!`);
             }
             case 'paper': {
-                if (result === 'scissors') return message.reply(`I chose **${result}**! I won!`);
-                else return message.reply(`I chose **${result}**! You won!`);        
+                if (result === 'scissors') return message.reply(`I choose **${result}**! I won!`);
+                else return message.reply(`I choose **${result}**! You won!`);        
             }
             case 'scissors': {
-                if (result === 'rock') return message.reply(`I chose **${result}**! I won!`);
-                else return message.reply(`I chose **${result}**! You won!`);
+                if (result === 'rock') return message.reply(`I choose **${result}**! I won!`);
+                else return message.reply(`I choose **${result}**! You won!`);
             }
             default: {
                 return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
