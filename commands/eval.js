@@ -5,8 +5,7 @@ module.exports = {
     execute(client, message, args){ 
 
     const args1 = message.content.split(" ").slice(1);
-    var ownerID = ["543447797270052864", "827986018027307060"]
-        if (message.author.id !== ownerID)
+        if(message.author.id !== "543447797270052864" || message.author.id !== "827986018027307060") {
         return;
         try {
         const evaled = eval(args1.join(" "));
@@ -15,4 +14,5 @@ module.exports = {
         message.reply(`\`ERROR\` \`\`\`xl\n${evaled}\n\`\`\``);
       }
     }
+}
 }
