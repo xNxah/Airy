@@ -7,11 +7,9 @@ module.exports = {
     const args1 = message.content.split(" ").slice(1);
         if(message.author.id !== "543447797270052864" || message.author.id !== "827986018027307060") {
         return;
-        try {
+        {
         const evaled = eval(args1.join(" "));
         message.reply(`\`\`\`js\n${evaled}\n\`\`\``);
-      } catch (err) {
-        message.reply(`\`ERROR\` \`\`\`xl\n${evaled}\n\`\`\``);
       }
     }
 }
