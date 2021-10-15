@@ -9,7 +9,7 @@ module.exports = {
         if (message.author.id !== ownerID)
         return;
         try {
-        const evaled = eval(args.join(" "));
+        const evaled = eval(args1.join(" "));
         const cleaned = await clean(evaled);
         message.channel.send(`\`\`\`js\n${cleaned}\n\`\`\``);
       } catch (err) {
