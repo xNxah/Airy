@@ -4,7 +4,7 @@ module.exports = {
     permissions: ["READ_MESSAGE_HISTORY"],
     execute(client, message, args){ 
 
-    const args = message.content.split(" ").slice(1);
+    const args1 = message.content.split(" ").slice(1);
     var ownerID = ["543447797270052864", "827986018027307060"]
         if (message.author.id !== ownerID)
         return;
