@@ -10,9 +10,9 @@ module.exports = {
         return;
         try {
         const evaled = eval(args1.join(" "));
-        message.channel.send(`\`\`\`js\n${evaled}\n\`\`\``);
+        message.reply(`\`\`\`js\n${evaled}\n\`\`\``);
       } catch (err) {
-        message.channel.send(`\`ERROR\` \`\`\`xl\n${cleaned}\n\`\`\``);
+        message.reply(`\`ERROR\` \`\`\`xl\n${evaled}\n\`\`\``);
       }
     }
 }
